@@ -3,6 +3,12 @@ node-liveosc
 
 node.js integration with Ableton Live via LiveOSC
 
+## Prerequisites
+
+You will need to have LiveOSC installed and running.  For best results, please use this version:
+
+https://github.com/dinchak/LiveOSC
+
 ## Usage
 Basic usage is as follows:
 
