@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Song</title>
+    <title>JSDoc: Class: Track</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Song</h1>
+    <h1 class="page-title">Class: Track</h1>
 
     
 
@@ -29,7 +29,7 @@
     <h2>
         <span class="ancestors"><a href="module-node-liveosc.html">node-liveosc</a>~</span>
     
-    Song
+    Track
     </h2>
     
 </header>
@@ -41,7 +41,7 @@
     
         
 <dt>
-    <h4 class="name" id="Song"><span class="type-signature"></span>new Song<span class="signature">(liveosc)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Track"><span class="type-signature"></span>new Track<span class="signature">(liveosc, id)</span><span class="type-signature"></span></h4>
 
     
 </dt>
@@ -49,7 +49,7 @@
 
     
     <div class="description">
-        Song object, represents the current state of the Ableton Live<br>set.  Contains tracks, returns, and devices, as well as master<br>track properties.
+        <p>Track object, represents an audio or midi track in the Ableton Live set.</p>
     </div>
     
 
@@ -99,7 +99,30 @@
 
             
 
-            <td class="description last">LiveOSC instance</td>
+            <td class="description last"><p>LiveOSC instance</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>id of the track</p></td>
         </tr>
 
     
@@ -127,11 +150,6 @@
 
     
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line21">line 21</a>
-    </li></ul></dd>
     
 
     
@@ -178,14 +196,14 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="beat"><span class="type-signature"></span>beat<span class="type-signature"> :Number</span></h4>
+    <h4 class="name" id="arm"><span class="type-signature"></span>arm<span class="type-signature"> :Number</span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        Current beat/play position
+        <p>Track armed (audio only)</p>
     </div>
     
 
@@ -222,10 +240,66 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line75">line 75</a>
-    </li></ul></dd>
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="audio"><span class="type-signature"></span>audio<span class="type-signature"> :Number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>0 = MIDI track, 1 = Audio track</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Number</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -244,14 +318,14 @@
         
             
 <dt>
-    <h4 class="name" id="devices"><span class="type-signature"></span>devices<span class="type-signature"> :Array</span></h4>
+    <h4 class="name" id="clips"><span class="type-signature"></span>clips<span class="type-signature"> :Array</span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        Current devices
+        <p>Clips in this track</p>
     </div>
     
 
@@ -288,10 +362,66 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line51">line 51</a>
-    </li></ul></dd>
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="devices"><span class="type-signature"></span>devices<span class="type-signature"> :Array</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Devices in this track</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Array</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -317,7 +447,7 @@
 <dd>
     
     <div class="description">
-        EventEmitter for song events
+        <p>EventEmitter for track events</p>
     </div>
     
 
@@ -354,10 +484,66 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line87">line 87</a>
-    </li></ul></dd>
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="id"><span class="type-signature"></span>id<span class="type-signature"> :Number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The id of this track</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Number</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -383,7 +569,7 @@
 <dd>
     
     <div class="description">
-        LiveOSC instance
+        <p>Instance of LiveOSC</p>
     </div>
     
 
@@ -420,10 +606,188 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line27">line 27</a>
-    </li></ul></dd>
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="mute"><span class="type-signature"></span>mute<span class="type-signature"> :Number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Track muted</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Number</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="name"><span class="type-signature"></span>name<span class="type-signature"> :String</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The name of this track</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">String</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="numScenes"><span class="type-signature"></span>numScenes<span class="type-signature"> :Number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Number of scenes in the track</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Number</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -449,7 +813,7 @@
 <dd>
     
     <div class="description">
-        Master track panning
+        <p>Track panning</p>
     </div>
     
 
@@ -486,11 +850,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line63">line 63</a>
-    </li></ul></dd>
-    
 
     
 
@@ -508,80 +867,14 @@
         
             
 <dt>
-    <h4 class="name" id="playing"><span class="type-signature"></span>playing<span class="type-signature"> :Number</span></h4>
+    <h4 class="name" id="sends"><span class="type-signature"></span>sends<span class="type-signature"> :Array</span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        Transport play state, 1 = stopped, 2 = playing
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line81">line 81</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="returns"><span class="type-signature"></span>returns<span class="type-signature"> :Array</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Current return tracks
+        <p>Track send levels<br>ex [{id: 0, value: 1.0}]</p>
     </div>
     
 
@@ -618,11 +911,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line45">line 45</a>
-    </li></ul></dd>
-    
 
     
 
@@ -640,14 +928,14 @@
         
             
 <dt>
-    <h4 class="name" id="scene"><span class="type-signature"></span>scene<span class="type-signature"> :Number</span></h4>
+    <h4 class="name" id="solo"><span class="type-signature"></span>solo<span class="type-signature"> :Number</span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        Currently selected scene
+        <p>Track soloed</p>
     </div>
     
 
@@ -683,143 +971,6 @@
 
     
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line69">line 69</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="tempo"><span class="type-signature"></span>tempo<span class="type-signature"> :Number</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Current tempo
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Number</span>
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line33">line 33</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="tracks"><span class="type-signature"></span>tracks<span class="type-signature"> :Array</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Current tracks
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Array</span>
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line39">line 39</a>
-    </li></ul></dd>
     
 
     
@@ -845,7 +996,7 @@
 <dd>
     
     <div class="description">
-        Master track volume
+        <p>Track volume</p>
     </div>
     
 
@@ -882,11 +1033,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line57">line 57</a>
-    </li></ul></dd>
-    
 
     
 
@@ -910,7 +1056,7 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="continue"><span class="type-signature"></span>continue<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="destroy"><span class="type-signature"></span>destroy<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 </dt>
@@ -918,7 +1064,7 @@
 
     
     <div class="description">
-        Trigger song continue play
+        <p>Called when a track is refreshed or destroyed</p>
     </div>
     
 
@@ -948,82 +1094,6 @@
 
     
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line303">line 303</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="nextCue"><span class="type-signature"></span>nextCue<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Move to next cue marker
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line310">line 310</a>
-    </li></ul></dd>
     
 
     
@@ -1060,7 +1130,7 @@
 
     
     <div class="description">
-        Listen for a song event, current events are:<br><br>  ready<br>  play<br>  beat<br>  tempo<br>  scene<br>  volume<br>  pan
+        <p>Listen for a track event, current events are:<br><br>  send<br>  solo<br>  arm<br>  mute<br>  volume<br>  pan<br>  name<br>  destroy</p>
     </div>
     
 
@@ -1110,7 +1180,7 @@
 
             
 
-            <td class="description last">event name</td>
+            <td class="description last"><p>event name</p></td>
         </tr>
 
     
@@ -1133,7 +1203,7 @@
 
             
 
-            <td class="description last">callback</td>
+            <td class="description last"><p>callback</p></td>
         </tr>
 
     
@@ -1162,11 +1232,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line409">line 409</a>
-    </li></ul></dd>
-    
 
     
 
@@ -1194,7 +1259,7 @@
         
             
 <dt>
-    <h4 class="name" id="play"><span class="type-signature"></span>play<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="refreshClips"><span class="type-signature"></span>refreshClips<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 </dt>
@@ -1202,7 +1267,7 @@
 
     
     <div class="description">
-        Trigger song play
+        <p>Refresh the state of all clips in the track</p>
     </div>
     
 
@@ -1233,11 +1298,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line296">line 296</a>
-    </li></ul></dd>
-    
 
     
 
@@ -1265,7 +1325,7 @@
         
             
 <dt>
-    <h4 class="name" id="playScene"><span class="type-signature"></span>playScene<span class="signature">(scene)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setArm"><span class="type-signature"></span>setArm<span class="signature">(arm)</span><span class="type-signature"></span></h4>
 
     
 </dt>
@@ -1273,7 +1333,7 @@
 
     
     <div class="description">
-        Trigger a scene play button
+        <p>Set the track arm state</p>
     </div>
     
 
@@ -1307,7 +1367,7 @@
 
         <tr>
             
-                <td class="name"><code>scene</code></td>
+                <td class="name"><code>arm</code></td>
             
 
             <td class="type">
@@ -1323,7 +1383,7 @@
 
             
 
-            <td class="description last">scene number to play</td>
+            <td class="description last"><p>0 or 1</p></td>
         </tr>
 
     
@@ -1352,11 +1412,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line346">line 346</a>
-    </li></ul></dd>
-    
 
     
 
@@ -1384,7 +1439,7 @@
         
             
 <dt>
-    <h4 class="name" id="prevCue"><span class="type-signature"></span>prevCue<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setMute"><span class="type-signature"></span>setMute<span class="signature">(mute)</span><span class="type-signature"></span></h4>
 
     
 </dt>
@@ -1392,220 +1447,7 @@
 
     
     <div class="description">
-        Move to previous cue marker
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line317">line 317</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="redo"><span class="type-signature"></span>redo<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Trigger redo
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line331">line 331</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="refresh"><span class="type-signature"></span>refresh<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Refresh the current song state<br>Recreates all tracks/returns/clips
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line254">line 254</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="setPan"><span class="type-signature"></span>setPan<span class="signature">(pan)</span><span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Sets the master track panning
+        <p>Set the track mute state</p>
     </div>
     
 
@@ -1639,7 +1481,7 @@
 
         <tr>
             
-                <td class="name"><code>pan</code></td>
+                <td class="name"><code>mute</code></td>
             
 
             <td class="type">
@@ -1655,7 +1497,7 @@
 
             
 
-            <td class="description last">new panning</td>
+            <td class="description last"><p>0 or 1</p></td>
         </tr>
 
     
@@ -1684,11 +1526,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line373">line 373</a>
-    </li></ul></dd>
-    
 
     
 
@@ -1716,7 +1553,7 @@
         
             
 <dt>
-    <h4 class="name" id="setTempo"><span class="type-signature"></span>setTempo<span class="signature">(tempo)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setName"><span class="type-signature"></span>setName<span class="signature">(name)</span><span class="type-signature"></span></h4>
 
     
 </dt>
@@ -1724,7 +1561,7 @@
 
     
     <div class="description">
-        Sets the tempo
+        <p>Set the name of the track</p>
     </div>
     
 
@@ -1758,13 +1595,13 @@
 
         <tr>
             
-                <td class="name"><code>tempo</code></td>
+                <td class="name"><code>name</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">String</span>
 
 
             
@@ -1774,7 +1611,7 @@
 
             
 
-            <td class="description last">new tempo</td>
+            <td class="description last"><p>the new track name</p></td>
         </tr>
 
     
@@ -1803,11 +1640,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line386">line 386</a>
-    </li></ul></dd>
-    
 
     
 
@@ -1835,7 +1667,7 @@
         
             
 <dt>
-    <h4 class="name" id="setVolume"><span class="type-signature"></span>setVolume<span class="signature">(volume)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setNumScenes"><span class="type-signature"></span>setNumScenes<span class="signature">(numScenes)</span><span class="type-signature"></span></h4>
 
     
 </dt>
@@ -1843,1076 +1675,7 @@
 
     
     <div class="description">
-        Sets the master track volume
-    </div>
-    
-
-    
-
-    
-
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>volume</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">new volume</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line360">line 360</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="stop"><span class="type-signature"></span>stop<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Trigger song stop
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line289">line 289</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="undo"><span class="type-signature"></span>undo<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Trigger undo
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line324">line 324</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="view"><span class="type-signature"></span>view<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Focus the master track
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line338">line 338</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="beatListener"><span class="type-signature">(inner) </span>beatListener<span class="signature">(new)</span><span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Respond to /live/beat<br>Called when a beat is reached in the song timeline
-    </div>
-    
-
-    
-
-    
-
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>new</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">beat</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line109">line 109</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="devicelistListener"><span class="type-signature">(inner) </span>devicelistListener<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Respond to /live/master/devicelist<br>Called when device list is received
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line209">line 209</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="panListener"><span class="type-signature">(inner) </span>panListener<span class="signature">(pan)</span><span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Respond to /live/master/pan<br>Called when master track panning changes
-    </div>
-    
-
-    
-
-    
-
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>pan</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">new panning (-1.0 - 1.0)</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line161">line 161</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="playListener"><span class="type-signature">(inner) </span>playListener<span class="signature">(play)</span><span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Respond to /live/play<br>Called when the song starts or stops
-    </div>
-    
-
-    
-
-    
-
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>play</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">state (1 = stopped, 2 = playing)</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line96">line 96</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="refreshListener"><span class="type-signature">(inner) </span>refreshListener<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Respond to:<br>/remix/oscserver/startup<br>/remix/oscserver/shutdown<br>/live/refresh<br>Refreshes the current song state
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line225">line 225</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="returnsListener"><span class="type-signature">(inner) </span>returnsListener<span class="signature">(numTracks)</span><span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Respond to /live/returns<br>Called when number of returns is reported
-    </div>
-    
-
-    
-
-    
-
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>numTracks</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">number of returns</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line187">line 187</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="sceneListener"><span class="type-signature">(inner) </span>sceneListener<span class="signature">(scene)</span><span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Respond to /live/scene<br>Called when scene changes
-    </div>
-    
-
-    
-
-    
-
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>scene</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">new scene number</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line135">line 135</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="scenesListener"><span class="type-signature">(inner) </span>scenesListener<span class="signature">(numScenes)</span><span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Respond to /live/scenes<br>Called when number of scenes is reported
+        <p>Set number of scenes in the track<br>Called by Song</p>
     </div>
     
 
@@ -2962,7 +1725,7 @@
 
             
 
-            <td class="description last">number of scenes</td>
+            <td class="description last"><p>number of scenes in the track</p></td>
         </tr>
 
     
@@ -2991,11 +1754,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line198">line 198</a>
-    </li></ul></dd>
-    
 
     
 
@@ -3023,7 +1781,7 @@
         
             
 <dt>
-    <h4 class="name" id="tempoListener"><span class="type-signature">(inner) </span>tempoListener<span class="signature">(tempo)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setPan"><span class="type-signature"></span>setPan<span class="signature">(pan)</span><span class="type-signature"></span></h4>
 
     
 </dt>
@@ -3031,7 +1789,7 @@
 
     
     <div class="description">
-        Respond to /live/tempo<br>Called when tempo changes
+        <p>Set the track panning</p>
     </div>
     
 
@@ -3065,7 +1823,7 @@
 
         <tr>
             
-                <td class="name"><code>tempo</code></td>
+                <td class="name"><code>pan</code></td>
             
 
             <td class="type">
@@ -3081,7 +1839,7 @@
 
             
 
-            <td class="description last">new tempo</td>
+            <td class="description last"><p>1.0 - 1.0</p></td>
         </tr>
 
     
@@ -3110,11 +1868,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line122">line 122</a>
-    </li></ul></dd>
-    
 
     
 
@@ -3142,7 +1895,7 @@
         
             
 <dt>
-    <h4 class="name" id="tracksListener"><span class="type-signature">(inner) </span>tracksListener<span class="signature">(numTracks)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setSend"><span class="type-signature"></span>setSend<span class="signature">(send, val)</span><span class="type-signature"></span></h4>
 
     
 </dt>
@@ -3150,7 +1903,7 @@
 
     
     <div class="description">
-        Repond to /live/tracks<br>Called when number of tracks is reported
+        <p>Set track send level</p>
     </div>
     
 
@@ -3184,7 +1937,7 @@
 
         <tr>
             
-                <td class="name"><code>numTracks</code></td>
+                <td class="name"><code>send</code></td>
             
 
             <td class="type">
@@ -3200,7 +1953,30 @@
 
             
 
-            <td class="description last">new number of tracks</td>
+            <td class="description last"><p>send id</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>val</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>new send level (0.0 - 1.0)</p></td>
         </tr>
 
     
@@ -3229,10 +2005,119 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line174">line 174</a>
-    </li></ul></dd>
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="setSolo"><span class="type-signature"></span>setSolo<span class="signature">(solo)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Set the track solo state</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>solo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>0 or 1</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -3261,7 +2146,7 @@
         
             
 <dt>
-    <h4 class="name" id="volumeListener"><span class="type-signature">(inner) </span>volumeListener<span class="signature">(volume)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setVolume"><span class="type-signature"></span>setVolume<span class="signature">(volume)</span><span class="type-signature"></span></h4>
 
     
 </dt>
@@ -3269,7 +2154,7 @@
 
     
     <div class="description">
-        Respond to /live/master/volume<br>Called when master track volume changes
+        <p>Set the track volume</p>
     </div>
     
 
@@ -3319,7 +2204,7 @@
 
             
 
-            <td class="description last">new volume (0.0 - 1.0)</td>
+            <td class="description last"><p>0.0 - 1.0</p></td>
         </tr>
 
     
@@ -3348,10 +2233,1277 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="song.js.html">lib/song.js</a>, <a href="song.js.html#line148">line 148</a>
-    </li></ul></dd>
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="view"><span class="type-signature"></span>view<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Focus the track</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="armListener"><span class="type-signature">(inner) </span>armListener<span class="signature">(trackId, arm)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Listen for /live/arm</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>trackId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the id of the track</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>arm</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>0 or 1</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="devicelistListener"><span class="type-signature">(inner) </span>devicelistListener<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Listen for /live/devicelist</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="muteListener"><span class="type-signature">(inner) </span>muteListener<span class="signature">(trackId, mute)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Listen for /live/mute</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>trackId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the id of the track</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>mute</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>0 or 1</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="nameListener"><span class="type-signature">(inner) </span>nameListener<span class="signature">(trackId, name)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Listen for /live/name/track<br>This is called when clips/devices are added or removed</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>trackId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the id of the track</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>track name</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="panListener"><span class="type-signature">(inner) </span>panListener<span class="signature">(trackId, pan)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Listen for /live/pan</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>trackId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the id of the track</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pan</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>new track panning</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="sendListener"><span class="type-signature">(inner) </span>sendListener<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Listen for /live/send</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="soloListener"><span class="type-signature">(inner) </span>soloListener<span class="signature">(trackId, solo)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Listen for /live/solo</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>trackId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the id of the track</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>solo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>0 or 1</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="trackinfoListener"><span class="type-signature">(inner) </span>trackinfoListener<span class="signature">(trackId, arm, solo, mute, audio, volume, pan)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Listen for /live/track/info</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>trackId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the id of the track</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>arm</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>0 or 1</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>solo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>0 or 1</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>mute</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>0 or 1</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>audio</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>0 = midi, 1 = audio</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>volume</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>current track volume</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pan</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>current track panning</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="volumeListener"><span class="type-signature">(inner) </span>volumeListener<span class="signature">(trackId, volume)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Listen for /live/volume</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>trackId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the id of the track</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>volume</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>new track volume</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -3399,7 +3551,7 @@
 <br clear="both">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha9</a> on Sun Jul 13 2014 14:52:01 GMT-0700 (MST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha9</a> on Sun Jul 13 2014 15:46:32 GMT-0700 (MST)
 </footer>
 
 <script> prettyPrint(); </script>

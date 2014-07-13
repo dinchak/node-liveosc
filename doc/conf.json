@@ -1,9 +1,0 @@
-{
-  "source": {
-    "include": ["..", "../lib"],
-    "exclude": ["../node_modules"],
-    "includePattern": ".+\\.js(doc)?$",
-    "excludePattern": "(^|\\/|\\\\)_"
-  },
-  "plugins": ["plugins/escapeHtml"]
-}

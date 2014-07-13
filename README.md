@@ -21,6 +21,10 @@ liveosc.song.on('ready', function () {
 });
 ```
 
+## Reference
+
+See the [API docs](https://github.com/dinchak/node-liveosc/wiki) for full usage information.
+
 ### Song Structure
 The LiveOSC object has a song property that contains a full object map of the current Live set.  The organization of the object is as follows:
 
@@ -129,7 +133,7 @@ There are also a number of events that can be triggered, such as playing a clip:
 clip.play();
 ```
 
-See the API docs for a full reference.
+See the [API docs](https://github.com/dinchak/node-liveosc/wiki) for a full reference.
 
 ### Events
 
@@ -150,7 +154,7 @@ clip.on('state', function (param) {
 }
 ```
 
-See the API docs for a full reference.
+See the [API docs](https://github.com/dinchak/node-liveosc/wiki) for a full reference.
 
 ### Using the REPL
 
