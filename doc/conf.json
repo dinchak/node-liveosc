@@ -5,6 +5,5 @@
     "includePattern": ".+\\.js(doc)?$",
     "excludePattern": "(^|\\/|\\\\)_"
   },
-  "destination": "./html/",
   "plugins": ["plugins/escapeHtml"]
 }

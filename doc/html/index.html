@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Index</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Index</h1>
+
+    
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>node-liveosc</h1><p>node.js integration with Ableton Live via LiveOSC</p>
+<h2>Usage</h2><p>Basic usage is as follows:</p>
+<pre class="prettyprint source lang-javascript"><code>// load LiveOSC class
+var LiveOSC = require('liveosc');
+
+// create new instance of LiveOSC, starts OSC listener
+var liveosc = new LiveOSC({debug: true});
+
+// triggered when Live is loaded and ready
+liveosc.song.on('ready', function () {
+
+  // start the song playing
+  liveosc.song.play();
+});</code></pre><h3>Song Structure</h3><p>The LiveOSC object has a song property that contains a full object map of the current Live set.  The organization of the object is as follows:</p>
+<h4>Song</h4><pre class="prettyprint source lang-javascript"><code>{
+  tempo: 120.0,
+  tracks: [{Track}, {Track}, ...],
+  returns: [{Return}, {Return}, ...],
+  devices: [{Device}, {Device}, ...],
+  volume: 0.0,
+  pan: 0.0,
+  scene: 0,
+  beat: 0,
+  playing: 1
+}</code></pre><h4>Track</h4><pre class="prettyprint source lang-javascript"><code>{
+  id: 0,
+  name: '1-MIDI',
+  clips: [{Clip}, {Clip}, ...],
+  sends: [{id: 0, value: 1.0}, {id: 1, value: 1.0}, ...],
+  devices: [{Device}, {Device}],
+  audio: 0,
+  solo: 0,
+  mute: 0,
+  arm: 0,
+  volume: 0,
+  pan: 0,
+  numScenes: 0
+}</code></pre><h4>Clip</h4><pre class="prettyprint source lang-javascript"><code>{
+  id: 0,
+  name: '',
+  track: {Track},
+  state: 0,
+  coarse: 0,
+  fine: 0,
+  loopstart: 0,
+  loopend: 0,
+  loopstate: 0,
+  warping: 0,
+  length: 0
+}</code></pre><h4>Return</h4><pre class="prettyprint source lang-javascript"><code>{
+  id: 0,
+  name: 'A-Reverb',
+  sends: [{id: 0, value: 1.0}, {id: 1, value: 1.0}, ...],
+  devices: [{Device}, {Device}],
+  solo: 0,
+  mute: 0,
+  volume: 0,
+  pan: 0
+}</code></pre><h4>Device</h4><pre class="prettyprint source lang-javascript"><code>{
+  id: 0,
+  name: 'Reverb',
+  track: {Track},
+  type: 'return',
+  params: [
+    {
+      id: 0,
+      value: 1,
+      name: 'Device On',
+      min: 0,
+      max: 1
+    },
+    {
+      id: 1,
+      value: 0.5555555820465088,
+      name: 'PreDelay',
+      min: 0,
+      max: 1
+    },
+    ...
+  ]
+}</code></pre><h3>Changing Parameters</h3><p>Most parameters have a corresponding set function that can be called to change them.  For example, to set a clip's pitch, use the setPitch function:</p>
+<pre class="prettyprint source lang-javascript"><code>clip.setPitch(12);</code></pre><p>There are also a number of events that can be triggered, such as playing a clip:</p>
+<pre class="prettyprint source lang-javascript"><code>clip.play();</code></pre><p>See the API docs for a full reference.</p>
+<h3>Events</h3><p>Each object emits various events that can be listened for.  For example, to listen for changes to a clip's playing state (ie. the clip was started or stopped):</p>
+<pre class="prettyprint source lang-javascript"><code>clip.on('state', function (param) {
+  // do something with param
+});</code></pre><p><code>param</code> will contain the new and previous values of the parameter, for example:</p>
+<pre class="prettyprint source lang-javascript"><code>{
+  value: 1,
+  prev: 0
+}</code></pre><p>See the API docs for a full reference.</p>
+<h3>Using the REPL</h3><p>A REPL is included to help with exploring the object model and how LiveOSC behaves:</p>
+<pre class="prettyprint source"><code>$ node repl
+LiveOSC> song.tracks[2].name;
+'3-Audio'
+LiveOSC> song.tracks[2].clips[1].name;
+'test'
+LiveOSC> song.tracks[2].clips[1].on('name', function (param) { console.log(param) });
+undefined
+LiveOSC> song.tracks[2].clips[1].setName('fresh jams');
+undefined
+{ value: 'fresh jams', prev: 'test' }
+LiveOSC> song.tracks[2].clips[1].name;
+'fresh jams'
+LiveOSC></code></pre></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Modules</h3><ul><li><a href="module-node-liveosc.html">node-liveosc</a></li></ul><h3>Classes</h3><ul><li><a href="module-node-liveosc-Clip.html">Clip</a></li><li><a href="module-node-liveosc-Device.html">Device</a></li><li><a href="module-node-liveosc-LiveOSC.html">LiveOSC</a></li><li><a href="module-node-liveosc-Return.html">Return</a></li><li><a href="module-node-liveosc-Song.html">Song</a></li><li><a href="module-node-liveosc-Track.html">Track</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha9</a> on Sun Jul 13 2014 14:52:01 GMT-0700 (MST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
