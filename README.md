@@ -85,7 +85,8 @@ The LiveOSC object has a song property that contains a full object map of the cu
   mute: 0,
   volume: 0,
   pan: 0
-}```
+}
+```
 
 #### Device
 ```javascript
