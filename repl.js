@@ -1,7 +1,7 @@
 var repl = require('repl');
 
-var LiveOSC = require('./app');
-var liveosc = new LiveOSC({debug: true});
+var LiveOSC = require('./index');
+var liveosc = new LiveOSC();
 
 var server = repl.start({
   prompt: 'LiveOSC> '

@@ -1,21 +1,15 @@
 /**
- * node-liveosc
- *
- * LiveOSC object.  Holds connection information and song object.
- *
+ * @module  node-liveosc
  * @author Tom Dinchak <dinchak@gmail.com>
  */
 
 var chalk = require('chalk');
-
-var Song = require('./lib/song');
-
 var OscReceiver = require('osc-receiver');
 var OscEmitter = require('osc-emitter');
+var Song = require('./lib/song');
 
 /**
- * LiveOSC sets up communication with LiveOSC and
- * holds the song object.
+ * LiveOSC sets up communication with LiveOSC and holds the song object.
  *
  * Options are as follows:
  *
@@ -24,6 +18,7 @@ var OscEmitter = require('osc-emitter');
  * opts.liveHost = host live is running on, default 127.0.0.1
  * opts.livePort = port live is listening on, default 9005
  * opts.waitTime = time to wait before sending ready event
+ * @constructor
  * @param {Object} opts options
  */
 var LiveOSC = function (opts) {

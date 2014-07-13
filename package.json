@@ -2,7 +2,7 @@
   "name": "node-liveosc",
   "version": "0.0.1",
   "description": "LiveOSC API library",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
