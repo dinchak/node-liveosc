@@ -160,6 +160,24 @@ clip.on('state', function (param) {
 }
 ```
 
+Events can be listened at a global level as well.  Each clip, track, device, and return will prefix its events with the type (clip:state for example) and broadcast them through the song event emitter.  To listen for all clip state changes:
+
+```javascript
+liveosc.song.on('clip:state', function (param) {
+  // do something with param
+});
+
+Additional parameters including the id of the object will be passed at the global level:
+
+```javascript
+{
+  id: 0, // the clip id
+  trackId: 0, // the track id the clip is on
+  value: 1,
+  prev: 0
+}
+```
+
 See the [API docs](https://github.com/dinchak/node-liveosc/wiki) for a full reference.
 
 ### Using the REPL
