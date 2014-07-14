@@ -166,6 +166,7 @@ Events can be listened at a global level as well.  Each clip, track, device, and
 liveosc.song.on('clip:state', function (param) {
   // do something with param
 });
+```
 
 Additional parameters including the id of the object will be passed at the global level:
 
