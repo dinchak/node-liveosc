@@ -1,5 +1,5 @@
 {
-  "name": "node-liveosc",
+  "name": "liveosc",
   "version": "0.0.1",
   "description": "node.js integration with Ableton Live via LiveOSC",
   "main": "index.js",
