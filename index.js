@@ -34,7 +34,7 @@ var LiveOSC = function (opts) {
   this.emitter.add(this.liveHost, this.livePort);
   
   this.receiver = new OscReceiver();
-  this.receiver.setMaxListeners(100);
+  this.receiver.setMaxListeners(1000);
   this.receiver.bind(this.port);
 
   if (this.debug) {
